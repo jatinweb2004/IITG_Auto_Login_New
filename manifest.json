@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "IITG AutoLogin 2.0 (Refreshed)",
-  "description": "Automatically log in to IITG network. Refreshed UI/CSS; same functionality.",
+  "name": "IITG AutoLogin Latest",
+  "description": "Automatically get logged in to your IITG network. New Design.",
   "version": "2.0.1",
   "background": {
     "service_worker": "background.js"
@@ -15,7 +15,7 @@
     "https://agnigarh.iitg.ac.in:1442/*"
   ],
   "action": {
-    "default_title": "IITG AutoLogin 2.0",
+    "default_title": "IITG AutoLogin Latest",
     "default_popup": "popup.html",
     "default_icon": {
       "128": "icon.png"
