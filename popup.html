@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>IITG AutoLogin</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --muted: #94a3b8;
+        --text: #e5e7eb;
+        --green: #22c55e;
+        --green-700: #16a34a;
+        --red: #ef4444;
+        --indigo: #6366f1;
+        --radius: 10px;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-width: 260px;
+        background: var(--bg);
+        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        color: var(--text);
+        padding: 14px;
+      }
+      .card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: var(--radius);
+        padding: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      p#msg {
+        margin: 0 0 12px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .row { display: flex; gap: 8px; }
+      button {
+        appearance: none;
+        flex: 1;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(255,255,255,0.12);
+        background: #1f2937;
+        color: var(--text);
+        font-weight: 600;
+        font-size: 13px;
+        cursor: pointer;
+        transition: transform .06s ease, background .2s ease;
+      }
+      button:hover { background: #253244; }
+      button:active { transform: translateY(1px); }
+      #login { background: var(--green); border-color: transparent; color: #0a0f13; }
+      #login:hover { background: var(--green-700); }
+      #logout { background: var(--red); border-color: transparent; color: #0a0f13; }
+      #changecred { background: var(--indigo); border-color: transparent; color: #0a0f13; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>IITG AutoLogin</h1>
+      <p id="msg">No credentials saved. Go to extension options to enter credentials.</p>
+      <div class="row" style="margin-bottom:8px;">
+        <button id="login">Login / Refresh</button>
+        <button id="logout">Logout</button>
+      </div>
+      <button id="changecred" style="width:100%;">Change Credentials</button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

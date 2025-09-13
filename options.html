@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>IITG AutoLogin • Options</title>
+    <style>
+      :root{
+        --bg:#0b1220;
+        --card:#0f1629;
+        --muted:#9aa5b1;
+        --text:#e5e7eb;
+        --accent:#22c55e;
+        --radius:12px;
+      }
+      *{box-sizing:border-box}
+      body{
+        margin:0;
+        padding:24px;
+        background:var(--bg);
+        font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        color:var(--text);
+      }
+      .wrap{
+        max-width:420px;
+        margin:0 auto;
+      }
+      .card{
+        background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+        border:1px solid rgba(255,255,255,0.08);
+        border-radius:var(--radius);
+        padding:24px;
+        box-shadow:0 14px 40px rgba(0,0,0,0.35);
+      }
+      h1{margin:0 0 6px;font-size:20px}
+      .sub{margin:0 0 18px;color:var(--muted);font-size:13px}
+      .field{margin-bottom:14px}
+      label{display:block;margin-bottom:6px;color:var(--muted);font-size:13px}
+      input{
+        width:100%;padding:12px 14px;border-radius:10px;
+        border:1px solid rgba(255,255,255,0.12);background:#0e1524;color:var(--text);font-size:14px;
+      }
+      button{
+        width:100%;padding:12px 14px;border-radius:10px;border:0;
+        background:var(--accent);color:#081016;font-weight:700;font-size:14px;cursor:pointer
+      }
+      button:hover{filter:brightness(0.95)}
+      .message{margin-top:10px;color:var(--muted);font-size:13px}
+      .logo{display:block;margin:0 auto 12px;opacity:.9}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>IITG AutoLogin</h1>
+        <p class="sub">Save your IITG credentials to enable automatic login.</p>
+        <form class="login-form">
+          <div class="field">
+            <label for="un">Username</label>
+            <input name="username" id="un" type="text" autocorrect="off" autocapitalize="off" placeholder="Username">
+          </div>
+          <div class="field">
+            <label for="pd">Password</label>
+            <input name="password" id="pd" type="password" autocomplete="off" placeholder="Password">
+          </div>
+          <button id="save">Save</button>
+          <p class="message" id="status"></p>
+          <p class="message">Forgot Password? <a href="https://automation.iitg.ernet.in/user/resetpwd" target="_blank" style="color:#a8ffb0;text-decoration:none">Reset here</a></p>
+        </form>
+      </div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>
